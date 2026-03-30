@@ -1,2 +1,4 @@
 .env
-pycache/
+__pycache__/
+datavenv/
+node_modules/

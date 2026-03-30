@@ -1,6 +1,7 @@
 from sqlalchemy import Column,  Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
-from models.base import Base
+from models.base import Base 
+from models.students_model import Students
 from utils.uuid_generator import generate_uuid
 
 class Laptop(Base):

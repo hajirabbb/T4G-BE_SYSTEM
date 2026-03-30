@@ -13,11 +13,13 @@ class StudentsServices:
         self.session.commit()
         return new_student
 
+    def get_one_student(self, student_id):
+        return self.session.query(Students).filter(Students.id == student_id).first()
+
     def get_all_students(self):
         all_students = self.session.query(Students).all()
-        for student in all_students:
-            print(
-                f"Id: {student.id}, First_name: {student.first_name}, Last_name: {student.last_name}, Email: {student.email}")
+        return all_students
+       
             
     def update_student (self,student_id, first_name = None, last_name = None, age = None,email = None, ):
         found_student  = self.get_one_student(student_id)
@@ -38,4 +40,4 @@ class StudentsServices:
       found_student  = self.get_one_student(student_id)
       if found_student:
           self.session.delete(found_student)
-          self.session.commit()       
+          self.session.commit()   

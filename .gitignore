@@ -2,3 +2,4 @@
 __pycache__/
 datavenv/
 node_modules/
+requirement.txt

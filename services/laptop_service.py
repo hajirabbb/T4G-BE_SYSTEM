@@ -1,5 +1,4 @@
 from models.laptop_model import Laptop
-from models.students_model import Students
 from utils.connection import db_session
 
 # pass in variable called session
@@ -19,8 +18,7 @@ class LaptopServices:
     def get_all_laptop(self):
         all_laptop = self.session.query(Laptop).all()
         for laptop in all_laptop:
-            print(
-                f"Id: {laptop.laptop_id}, laptop_name: {laptop.laptop_name}, cpu: {laptop.cpu}, version: {laptop.version}student_id:{laptop.students_id}")
+           return laptop
 
     def update_laptop(self, laptop_id, laptop_name=None, cpu=None, students_id=None, version=None):
         found_laptop = self.get_one_laptop(laptop_id)

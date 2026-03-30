@@ -3,7 +3,7 @@ from sqlalchemy.orm import relationship
 from models.base import Base
 from utils.uuid_generator import generate_uuid
 """from utils.connection import db_session"""
-from models.laptop_model import Laptop
+
 
 
 
@@ -19,5 +19,10 @@ class Students(Base):
 
 # for synchronization purposes.
     laptops = relationship("Laptop", back_populates="Students")
+
+
+def __str__(self):
+    return f"Id: {self.student.id}, First_name: {self.student.first_name}, Last_name: {self.student.last_name}, Email: {self.student.email}"
+
     
 

@@ -62,14 +62,14 @@ if student_to_delete:
 else:
     print(f"student was not found")"""
     
-yaa = Students(first_name = "yaa", last_name ="Carson",email ="yaa@gmail.com", age = 25 )
+"""yaa = Students(first_name = "yaa", last_name ="Carson",email ="yaa@gmail.com", age = 25 )
 db_session.add(yaa)
 db_session.commit()
 pamela_s_laptop = Laptop(laptop_name = "HP Elitebood", cpu ="intel core 17", version =22, students_id = yaa.id)
 db_session.add(pamela_s_laptop)
 db_session.commit()
 print(f"New Addition Info Id: {yaa.id}, First_name: {yaa.first_name}, last_name: {yaa.last_name}, Email: {yaa.email}")
-print(f"New Laptop Additon - Id:{pamela_s_laptop.laptop_id},Owner:{pamela_s_laptop.students_id} laptop_Name{pamela_s_laptop.laptop_name}")
+print(f"New Laptop Additon - Id:{pamela_s_laptop.laptop_id},Owner:{pamela_s_laptop.students_id} laptop_Name{pamela_s_laptop.laptop_name}")"""
 
 
 
